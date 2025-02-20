@@ -4,7 +4,7 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     {% if site.analytics-google %}
         {% include analytics-google.html %}
     {% endif %}
@@ -40,6 +40,7 @@ layout: compress
 
 </head>
 <body>
+    
     <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
         {% if page.layout == "post" %}
             <div class="post">
@@ -50,11 +51,14 @@ layout: compress
                 <div class="{{ page.title | downcase }}">
             {% endif %}
         {% endif %}
-
             {{ content }}
+        
             </div>
                 </div>
             </div>
+        
     </div>
+    
+    
 </body>
 </html>
