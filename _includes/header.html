@@ -22,10 +22,11 @@
                 <img class="selfie" alt="{{ site.title }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
             </span>
         {% endif %}
+        
 
         <h1 class="title">{{ site.title }}</h1>
-        <h2 class="description">{{ site.bio }}</h2>
-        <h3>Data Product Manager | Data Scientist & Machine Learning Engineer | M.Sc. in Physics</h3>
+        <h2>{{ site.bio }}</h2>
+        <h3 class="description">Python Backend Developer | API REST | FastAPI, PySpark, SQL/NoSQL, AWS, Linux, Docker | Data Engineer | AI & Machine Learning & NLP | Vector Database | Adaptable to Change</h3>
 
         {% include social-links.html %}
     </header>
