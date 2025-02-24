@@ -4,7 +4,7 @@ title: Projects
 ---
 <section class="list">
     {% if site.posts.size == 0 %}
-		<p class="text-center">Ningun ni proyecto publicado por ahora!</p>
+		<p class="text-center">¡Ningún proyecto publicado por ahora!</p>
 	{% else %}
         {% assign projects_posts = site.posts | where: "category", "project" %}
         {% if projects_posts.size == 0 %}

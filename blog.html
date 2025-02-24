@@ -4,7 +4,7 @@ title: Blog
 ---
 <section class="list">
 	{% if site.posts.size == 0 %}
-		<p class="text-center">Ningun articulo publicado por ahora!</p>
+		<p class="text-center">¡Ningún artículo publicado por ahora!</p>
 	{% else %}
 		{% assign blog_posts = site.posts | where: "category", "blog" %}
 		{% if blog_posts.size == 0 %}
