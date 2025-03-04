@@ -10,35 +10,65 @@ layout: page
 
 <p>Tengo un fuerte compromiso con el aprendizaje continuo y la innovación. Además, aplico metodologías ágiles como Scrum para asegurar una gestión eficiente de proyectos. Mis objetivos profesionales incluyen contribuir al desarrollo de soluciones backend que transformen procesos y generen valor.</p>
 
+<h2>Trayectoria profesional</h2>
+
+* **Programador - *Corporación Interuniversitaria de Servicios*** (Octubre 2022 – Diciembre 2024)
+* **Desarrollador de algoritmos AI - *Universidad de Antioquia*** (Marzo 2022 – Octubre 2022)
+* **Auxiliar de programación - *Universidad de Antioquia*** (Octubre 2021 – Marzo 2022)
+* **Mediador-Explorador - *Parque Explora*** (Noviembre 2016 - Enero 2020)
+
+<h2>Habilidades Técnicas y Herramientas</h2>
+
+* **Lenguajes de Programación:** Python, PHP, Nodejs
+* **Bases de Datos:** MySQL (relacional), PostrgreSQL (relacional), MongoDB (no relacional), DynamoDB (no relacional)
+* **Control de versiones:** Git y GitHub
+* **Procesamiento y Análisis de Datos:** PySpark, Pandas, Numpy
+* **Desarrollo Frontend:** HTML, CSS, JavaScript, Bootstrap
+* **Servicios en la Nube:** AWS (EC2, S3, Lambda), GCP, DigitalOcean
+* **Contenedores y orquestación:** Docker
+* **Desarrollo de APIs:** FastAPI, Flask, Django, Express
+* **Pruebas unitarias:** Pytest
+* **Metodologías Ágiles:** Scrum, Kanban
+* **Machine Learning e IA:** NLP, Embeddings, NER, Regresión, Clasificación y Topic Modeling
+
+<h2>Reconocimientos y premios</h2>
+
+<div class="side-by-side">
+    <div class="toleft">
+        <img class="image" width="500" height="200" src="/assets/images/BancolombiaDataton.png" alt="Alt Text">
+        <figcaption class="caption">Cambiar imagen por certificado bancolombia</figcaption>
+    </div>
+
+    <div class="toright">
+        <p>En la vida, como en el desarrollo de software, todo necesita una base sólida, y para mí, esa base es mi familia. Compartir momentos con ellos me recuerda la importancia del equilibrio entre el trabajo y la vida personal. Las risas en una reunión, las charlas sobre el día a día y los pequeños momentos juntos son como el "debugging" de la rutina: hacen que todo cobre sentido y funcione mejor. Mi familia es mi mayor fuente de motivación y el motor que me impulsa a seguir creciendo, tanto personal como profesionalmente.</p>
+    </div>
+</div>
+
+<h2>Colaboracion en publicaciones</h2>
+
+<div class="side-by-side">
+    <div class="toleft">
+        <img class="image" src="/assets/images/Gumelab.png" alt="Alt Text">
+        <figcaption class="caption">Cambiar imagen por portada manual</figcaption>
+    </div>
+
+    <div class="toright">
+        <p>En la vida, como en el desarrollo de software, todo necesita una base sólida, y para mí, esa base es mi familia. Compartir momentos con ellos me recuerda la importancia del equilibrio entre el trabajo y la vida personal. Las risas en una reunión, las charlas sobre el día a día y los pequeños momentos juntos son como el "debugging" de la rutina: hacen que todo cobre sentido y funcione mejor. Mi familia es mi mayor fuente de motivación y el motor que me impulsa a seguir creciendo, tanto personal como profesionalmente.</p>
+    </div>
+</div>
+
 <h2>Skills</h2>
 
-<ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Tests)</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
-</ul>
-
-<h2>Projects</h2>
-
-<ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
-</ul>
+* Trabajo en equipo
+* Resolucion de problemas
+* Pensamiento critico
+* Adaptabilidad
+* Comunicacion efectiva
+* Gestion del tiempo
 
 <h2>Hobbies</h2>
 
-<h3>Trekking: Explorando caminos, explorando ideas</h3>
+<h3>Trekking: Explorando caminos, explorando ideas (añadir emojis)</h3>
 
 <div class="toleft">
 	<img class="image" src="/assets/images/trekking.png" alt="Alt Text">
