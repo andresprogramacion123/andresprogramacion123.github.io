@@ -36,11 +36,15 @@ layout: page
 <div class="side-by-side">
     <div class="toleft">
         <img class="image" width="500" height="200" src="/assets/images/BancolombiaDataton.png" alt="Alt Text">
-        <figcaption class="caption">Cambiar imagen por certificado bancolombia</figcaption>
+        <figcaption class="caption">Certificado Bancolombia</figcaption>
     </div>
 
     <div class="toright">
-        <p>En la vida, como en el desarrollo de software, todo necesita una base sólida, y para mí, esa base es mi familia. Compartir momentos con ellos me recuerda la importancia del equilibrio entre el trabajo y la vida personal. Las risas en una reunión, las charlas sobre el día a día y los pequeños momentos juntos son como el "debugging" de la rutina: hacen que todo cobre sentido y funcione mejor. Mi familia es mi mayor fuente de motivación y el motor que me impulsa a seguir creciendo, tanto personal como profesionalmente.</p>
+        <p>
+        En el 2022, asumí uno de los desafíos más emocionantes de mi carrera: la Datatón Bancolombia, una competencia nacional que reunía a mentes brillantes para resolver problemas reales con datos. El reto era tan ambicioso como inspirador: crear un sistema inteligente de recomendación de contenido, aplicando algoritmos de Inteligencia Artificial y técnicas de Procesamiento del Lenguaje Natural (NLP).
+
+        Durante jornadas intensas de análisis, modelado y validación, cada línea de código que escribí llevaba la intención de comprender mejor los datos y ofrecer valor real al usuario. Mi esfuerzo no fue en vano: me clasifiqué entre los 20 finalistas destacados, en una competencia con decenas de equipos de todo el país. Esta experiencia reafirmó mi pasión por la ciencia de datos y me impulsó a seguir explorando soluciones que combinan IA con impacto humano.
+        </p>
     </div>
 </div>
 
@@ -49,11 +53,14 @@ layout: page
 <div class="side-by-side">
     <div class="toleft">
         <img class="image" src="/assets/images/Gumelab.png" alt="Alt Text">
-        <figcaption class="caption">Cambiar imagen por portada manual</figcaption>
+        <figcaption class="caption">Portada del manual</figcaption>
     </div>
 
     <div class="toright">
-        <p>En la vida, como en el desarrollo de software, todo necesita una base sólida, y para mí, esa base es mi familia. Compartir momentos con ellos me recuerda la importancia del equilibrio entre el trabajo y la vida personal. Las risas en una reunión, las charlas sobre el día a día y los pequeños momentos juntos son como el "debugging" de la rutina: hacen que todo cobre sentido y funcione mejor. Mi familia es mi mayor fuente de motivación y el motor que me impulsa a seguir creciendo, tanto personal como profesionalmente.</p>
+        <p>En 2022, tuve el privilegio de participar en la creación del "Manual para el uso de métodos digitales en proyectos de humanidades", una iniciativa colaborativa que surgió en el marco del proyecto GUMELAB, liderado por la Freie Universität Berlin. Este proyecto internacional y multidisciplinario exploraba cómo se transmite la historia a través de los medios de entretenimiento en América Latina, integrando herramientas digitales con enfoques de memoria y análisis histórico.
+
+        Mi contribución al manual formó parte de una experiencia enriquecedora, donde el diálogo entre disciplinas y culturas permitió construir una guía práctica para investigadores en humanidades que buscan incorporar métodos digitales en sus proyectos. Esta participación no solo fortaleció mis habilidades en investigación digital, sino que también reafirmó mi compromiso con el cruce entre tecnología, historia y memoria colectiva.
+        </p>
     </div>
 </div>
 
