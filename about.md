@@ -31,12 +31,12 @@ layout: page
 * **Metodologías Ágiles:** Scrum, Kanban
 * **Machine Learning e IA:** NLP, Embeddings, NER, Regresión, Clasificación y Topic Modeling
 
-<h2>Reconocimientos y premios</h2>
+<h2>Reconocimientos y premios 👏🎉</h2>
 
 <div class="side-by-side">
     <div class="toleft">
         <img class="image" width="500" height="200" src="/assets/images/BancolombiaDataton.png" alt="Alt Text">
-        <figcaption class="caption">Certificado Bancolombia</figcaption>
+        <figcaption class="caption">Certificado Bancolombia 🌟💡</figcaption>
     </div>
 
     <div class="toright">
@@ -48,7 +48,7 @@ layout: page
     </div>
 </div>
 
-<h2>Colaboracion en publicaciones</h2>
+<h2>Colaboracion en publicaciones 📚🧠</h2>
 
 <div class="side-by-side">
     <div class="toleft">
@@ -64,7 +64,7 @@ layout: page
     </div>
 </div>
 
-<h2>Skills</h2>
+<h2>Skills 😎</h2>
 
 * Trabajo en equipo
 * Resolucion de problemas
@@ -75,7 +75,8 @@ layout: page
 
 <h2>Hobbies</h2>
 
-<h3>Trekking: Explorando caminos, explorando ideas (añadir emojis)</h3>
+<h3>Trekking: Explorando caminos, explorando ideas 🚀😄</h3>
+
 
 <div class="toleft">
 	<img class="image" src="/assets/images/trekking.png" alt="Alt Text">
@@ -86,7 +87,7 @@ layout: page
 	<p>Cada sendero que recorro es como un nuevo desafío en el desarrollo de software: incierto, retador y lleno de descubrimientos. Caminar por la montaña me enseña que, al igual que en la programación, la paciencia y la planificación son claves. La satisfacción de llegar a la cima después de horas de esfuerzo me recuerda lo gratificante que es ver un proyecto terminado y funcionando a la perfección.</p>
 </div>
 
-<h3>Pasar tiempo con mi familia: La base de todo</h3>
+<h3>Pasar tiempo con mi familia: La base de todo 👨‍👩‍👧‍👦❤️</h3>
 <div class="side-by-side">
     <div class="toleft">
         <img class="image" src="/assets/images/familia.jpg" alt="Alt Text">
