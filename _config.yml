@@ -1,9 +1,10 @@
 # main text of home
-title: Julián Andrés Montoya
-bio: Desarrollador de Software
+title: Julián Montoya
+bio: Backend Developer especializado en Python, AWS y Machine Learning
 
 # twitter summary info
-description: Portafolio y blog de desarrollador de software por Julián Andrés Montoya
+description: Desarrollador Backend especializado en Python, AWS y Machine Learning. 3+ años creando APIs REST escalables y soluciones de IA. Portfolio y blog técnico.
+author: Julián Montoya
 
 # if it's an external image, update below for true
 # better with square images
@@ -17,10 +18,10 @@ dark-theme: true
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
-resume-external: true
-resume-url: https://drive.google.com/file/d/1qX-iyiSXZaeyAprD3btm7HcWtxWLpcSg/view?usp=sharing
+resume-external: false
+resume-url: /cv/JulianMontoya.pdf
 
-url: https://andresprogramacion123.github.io
+url: https://juliandev.me
 # your url: https://USERNAME.github.io
 
 permalink: /:title/

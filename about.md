@@ -20,7 +20,7 @@ layout: page
 <h2>Habilidades Técnicas y Herramientas</h2>
 
 * **Lenguajes de Programación:** Python, PHP, Nodejs
-* **Bases de Datos:** MySQL (relacional), PostrgreSQL (relacional), MongoDB (no relacional), DynamoDB (no relacional)
+* **Bases de Datos:** MySQL (relacional), PostgreSQL (relacional), MongoDB (no relacional), DynamoDB (no relacional)
 * **Control de versiones:** Git y GitHub
 * **Procesamiento y Análisis de Datos:** PySpark, Pandas, Numpy
 * **Desarrollo Frontend:** HTML, CSS, JavaScript, Bootstrap
@@ -67,10 +67,10 @@ layout: page
 <h2>Skills 😎</h2>
 
 * Trabajo en equipo
-* Resolucion de problemas
+* Resolución de problemas
 * Pensamiento critico
 * Adaptabilidad
-* Comunicacion efectiva
+* Comunicación efectiva
 * Gestion del tiempo
 
 <h2>Hobbies</h2>
