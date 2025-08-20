@@ -1,7 +1,7 @@
 # Portafolio Personal - Julián Andrés Montoya
 
 <p align="center">
-    <h2 align="center">Desarrollador de Software - <a href="https://andresprogramacion123.github.io">Ver sitio</a></h2>
+    <h2 align="center">Desarrollador de Software - <a href="https://juliandev.me">Ver sitio</a></h2>
 </p>
 
 <p align="center">Portafolio profesional y blog técnico desarrollado con Jekyll usando el template Indigo.</p>
@@ -219,7 +219,7 @@ En este tutorial aprenderemos a crear APIs REST...
 
 ## Despliegue
 
-El sitio se despliega automáticamente en **GitHub Pages** desde la rama `gh-pages`. Cualquier commit a esta rama actualizará el sitio en https://andresprogramacion123.github.io
+El sitio se despliega automáticamente en **GitHub Pages** desde la rama `gh-pages`. Cualquier commit a esta rama actualizará el sitio en https://juliandev.me
 
 ### Proceso de Despliegue
 1. Hacer push a la rama `gh-pages`

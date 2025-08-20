@@ -19,7 +19,7 @@ dark-theme: true
 # and specify source (external or local).
 resume: true
 resume-external: false
-resume-url: /cv/JulianMontoya.pdf
+resume-url: cv/JulianMontoya.pdf
 
 url: https://juliandev.me
 # your url: https://USERNAME.github.io
@@ -44,18 +44,13 @@ github: andresprogramacion123
 email: julianmontoya3.1416@gmail.com
 
 authors:
-  johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
-    external-image: false
-    picture: assets/images/profile.jpg
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+    julianmontoya:
+      name: Julián Montoya
+      bio: Backend Developer especializado en Python, AWS y Machine Learning
+      external-image: false
+      picture: assets/images/FondoBlanco.png
+      github: andresprogramacion123
+      linkedin: julianmontoya95
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
