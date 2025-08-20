@@ -1,7 +1,7 @@
-{% if page.title == "Home"
+{% if page.slug == "home"
    or page.title == "Blog"
-   or page.title == "Projects"
-   or page.title == "Tags"
+   or page.slug == "projects"
+   or page.slug == "tags"
 %}{% assign showHeader = true %}{% endif %}
 
 {% if showHeader == true %}

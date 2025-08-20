@@ -5,6 +5,7 @@ bio: Backend Developer especializado en Python, AWS y Machine Learning
 # twitter summary info
 description: Desarrollador Backend especializado en Python, AWS y Machine Learning. 3+ años creando APIs REST escalables y soluciones de IA. Portfolio y blog técnico.
 author: Julián Montoya
+keywords: "desarrollador python, backend developer, aws, machine learning, api rest, flask, fastapi, postgresql, mongodb, colombia developer, julián montoya"
 
 # if it's an external image, update below for true
 # better with square images
@@ -23,6 +24,8 @@ resume-url: cv/JulianMontoya.pdf
 
 url: https://juliandev.me
 # your url: https://USERNAME.github.io
+lang: es
+locale: es_CO
 
 permalink: /:title/
 

@@ -1,6 +1,7 @@
 ---
-title: About
+title: Sobre mí
 layout: page
+slug: about
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 

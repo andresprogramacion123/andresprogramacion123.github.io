@@ -1,6 +1,6 @@
-<nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
+<nav class="{% if page.slug == "home" or page.title == "Inicio" %}nav-home{% else %}nav{% endif %}">
     <ul class="list">
-        {% if page.title != "Home" %}
+        {% if page.slug != "home" and page.title != "Inicio" %}
             <li class="item">
                 <a class="link" href="{{ site.url }}/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -21,7 +21,7 @@
         {% endif %}
 
         {% if site.projects == true %}
-            {% if page.title != "Projects" %}
+            {% if page.slug != "projects" and page.title != "Proyectos" %}
                 <li class="item">
                     <a class="link" href="{{ site.url }}/projects">Proyectos</a>
                 </li>
@@ -29,7 +29,7 @@
         {% endif %}
 
         {% if site.about == true %}
-            {% if page.title != "About" %}
+            {% if page.slug != "about" and page.title != "Sobre mí" %}
                 <li class="item">
                     <a class="link" href="{{ site.url }}/about">Sobre mí</a>
                 </li>

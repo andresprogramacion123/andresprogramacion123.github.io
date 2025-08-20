@@ -1,2 +1,5 @@
 User-agent: *
 Disallow:
+
+# Sitemap para ayudar a los motores de búsqueda
+Sitemap: https://juliandev.me/sitemap.xml

@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     {% if site.analytics-google %}
@@ -46,9 +46,9 @@ layout: compress
             <div class="post">
         {% else %}
             {% if showHeader != true %}
-                <div class="page {{ page.title | downcase }}">
+                <div class="page {{ page.slug | default: page.title | downcase }}">
             {% else %}
-                <div class="{{ page.title | downcase }}">
+                <div class="{{ page.slug | default: page.title | downcase }}">
             {% endif %}
         {% endif %}
             {{ content }}
