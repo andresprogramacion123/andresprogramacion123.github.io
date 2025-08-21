@@ -1,72 +1,292 @@
 # Portafolio Profesional - Julián Montoya
 
-<p align="center">
-    <h2 align="center">Backend Developer Python & AWS - <a href="https://juliandev.me">🚀 Ver Portafolio</a></h2>
-</p>
+## 📋 Descripción General
 
-<p align="center">Portafolio profesional optimizado para demostrar experiencia en desarrollo backend, Python, AWS y Machine Learning.</p>
+Portafolio profesional basado en **Jekyll** para Julián Montoya, Backend Developer especializado en Python, AWS y Machine Learning. El sitio utiliza el template **Indigo** con enfoque minimalista y está optimizado para demostrar experiencia técnica profesional.
 
-## 🎯 Sobre el Desarrollador
+## 🏗️ Arquitectura Técnica
 
-**Julián Montoya** es Backend Developer con 3+ años de experiencia especializado en:
-- **Python** (FastAPI, Flask, Django)
-- **AWS** (EC2, S3, Lambda)  
-- **Machine Learning** y procesamiento de datos
-- **APIs REST** escalables y eficientes
-
-**🏆 Logros destacados:** Finalista Top 20 en Datatón Bancolombia 2022</p>
-
-***
-
-## ✨ Características del Portafolio
-
-### 🎨 Secciones Principales
-1. **🏠 Inicio** - Perfil profesional con información clave
-2. **👨‍💻 Sobre mí** - Experiencia, habilidades y logros detallados
-3. **🚀 Proyectos** - Portafolio de desarrollos técnicos (ready para contenido)
-4. **📝 Blog** - Artículos técnicos y tutoriales (ready para contenido)
-5. **🏷️ Etiquetas** - Organización por tecnologías
-6. **📄 CV** - Currículum en PDF accesible directamente
-
-### 🔧 Optimizaciones Implementadas
-- **🌐 SEO Avanzado**: Meta tags, JSON-LD schema, keywords estratégicas
-- **📱 Responsive**: Adaptado a todos los dispositivos  
-- **⚡ Performance**: Compresión HTML, CSS optimizado
-- **🎨 UI/UX**: Tema oscuro profesional, animaciones con particles.js
-- **🔗 Branding**: Dominio personalizado juliandev.me
-- **🔍 Discoverability**: Sitemap automático, robots.txt optimizado
-
-### 📁 Estructura de Archivos
-
-```
-portafolio/
-├── _config.yml          # ⚙️ Configuración principal (SEO, redes sociales)
-├── _includes/           # 🧩 Componentes reutilizables
-├── _layouts/            # 📐 Plantillas de página
-├── _posts/              # 📝 Proyectos y artículos (pendiente contenido)
-├── _sass/               # 🎨 Estilos organizados por componentes
-├── assets/              # 📸 Imágenes, CV y recursos
-├── cv/                  # 📄 CV en PDF
-├── about.md             # 👨‍💻 Biografía profesional
-├── index.html           # 🏠 Página principal
-└── robots.txt           # 🤖 Optimización para buscadores
-```
-
-### 🎯 Configuración Técnica
-
-**Información Personal Configurada:**
-- **Nombre**: Julián Montoya
-- **Bio**: Backend Developer especializado en Python, AWS y Machine Learning  
+### Template Base: Indigo
+- **Framework**: Jekyll (generador de sitios estáticos)
+- **Filosofía**: Minimalista, enfocado en contenido
+- **Despliegue**: GitHub Pages automático
 - **Dominio**: https://juliandev.me
-- **Idioma**: Español (Colombia)
 
-**Redes Sociales Activas:**
-- LinkedIn: julianmontoya95
-- GitHub: andresprogramacion123
-- Email: julianmontoya3.1416@gmail.com
-- WhatsApp: +57 322 692 1491
+### Estructura del Proyecto
 
-**SEO Keywords**: desarrollador python, backend developer, aws, machine learning, api rest
+```
+├── _config.yml              # Configuración principal de Jekyll
+├── _layouts/                 # Plantillas HTML
+│   ├── default.html         # Layout base con head y body
+│   ├── page.html            # Para páginas estáticas
+│   ├── post.html            # Para posts/artículos
+│   └── compress.html        # Compresión HTML automática
+├── _includes/               # Componentes reutilizables
+│   ├── header.html          # Header con particles.js
+│   ├── nav.html             # Navegación principal
+│   ├── footer.html          # Footer del sitio
+│   ├── social-links.html    # Enlaces sociales
+│   ├── style.scss           # Importaciones CSS tema claro
+│   └── style-dark.scss      # Importaciones CSS tema oscuro
+├── _sass/                   # Estilos organizados
+│   ├── base/                # Estilos base y variables
+│   ├── components/          # Componentes específicos
+│   └── pages/               # Estilos por página
+├── assets/                  # Recursos estáticos
+│   ├── images/              # Imágenes y CV
+│   └── particles.json       # Configuración de animaciones
+├── about.md                 # Página "Sobre mí"
+├── index.html               # Página de inicio
+└── cv/                      # Currículum en PDF
+```
+
+## 🎨 Sistema de Estilos
+
+### CSS Architecture (Sass/SCSS)
+```
+_sass/
+├── base/
+│   ├── variables.sass       # Variables de colores y fuentes
+│   ├── variables-dark.sass  # Variables para tema oscuro
+│   ├── normalize.scss       # Reset CSS
+│   ├── general.sass         # Estilos generales
+│   ├── syntax.sass          # Resaltado de código
+│   └── helpers.sass         # Utilidades CSS
+├── components/              # Componentes modulares
+│   ├── header.sass          # Header de inicio
+│   ├── nav.sass             # Navegación
+│   ├── footer.sass          # Footer
+│   ├── side-by-side.sass    # Layout dos columnas
+│   ├── social-links.sass    # Enlaces sociales
+│   └── [otros].sass
+└── pages/                   # Estilos por página
+    ├── page.sass            # Páginas generales (.about)
+    ├── home-blog-projects.sass # Página de inicio
+    ├── post.sass            # Posts individuales
+    └── tags.sass            # Página de etiquetas
+```
+
+### Variables de Diseño
+```sass
+// Colores principales (variables.sass)
+$alpha: #666      // Texto secundario
+$beta: #222       // Texto principal
+$delta: #rgb(1, 44, 107) // Enlaces y acentos
+$epsilon: #ededed // Bordes
+$omega: #fff      // Fondo claro
+
+// Breakpoints responsivos
+$mobile: "max-width: 400px"
+$tablet: "400px-1050px"
+$above: "min-width: 780px"
+$below: "max-width: 780px"
+```
+
+## 📚 Librerías y Dependencias
+
+### JavaScript
+- **Particles.js**: Animaciones de fondo en homepage
+- **FontAwesome 6.4.2**: Iconografía completa
+
+### Jekyll Plugins
+- **jekyll-seo-tag**: Optimización SEO automática
+- **jekyll-gist**: Integración con GitHub Gists
+- **jekyll-feed**: RSS feed automático
+- **jemoji**: Soporte para emojis
+
+### CSS Framework
+- **Normalize.css**: Reset CSS consistente
+- **Sass/SCSS**: Preprocesador CSS nativo de Jekyll
+
+## ⚙️ Proceso de Renderizado Jekyll
+
+### 1. Configuración (`_config.yml`)
+```yaml
+# Jekyll lee configuración base
+title: Julián Montoya
+bio: Backend Developer...
+dark-theme: true  # Tema oscuro activo
+width: normal     # Ancho del contenido
+animation: true   # Animaciones habilitadas
+```
+
+### 2. Compilación de Estilos
+```scss
+// En _layouts/default.html
+{% if site.dark-theme %}
+    {% capture scss_sheet %}{% include style-dark.scss %}{% endcapture %}
+{% else %}
+    {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
+{% endif %}
+{{ scss_sheet | scssify }}  // Compilación Sass → CSS
+```
+
+### 3. Rendering de Páginas
+
+#### Página de Inicio (`index.html`)
+```
+index.html (layout: page)
+├── _layouts/page.html (layout: default)
+│   └── _layouts/default.html
+│       ├── {% include header.html %} (con particles.js)
+│       ├── {{ content }}
+│       └── {% include footer.html %}
+```
+
+#### Página "Sobre mí" (`about.md`)
+```
+about.md (layout: page)
+├── Markdown → HTML conversion
+├── _layouts/page.html (layout: default)
+│   └── _layouts/default.html
+│       ├── {% include header.html %} (SIN particles.js)
+│       ├── {{ content }} (HTML convertido)
+│       └── {% include footer.html %}
+```
+
+### 4. Lógica Condicional del Header
+```liquid
+{% if page.slug == "home" %}
+    <!-- Header con particles.js y foto de perfil -->
+    <div id="particles-js"></div>
+    <header class="header-home">
+        <img class="selfie" src="..." />
+        <h1>{{ site.title }}</h1>
+        <h2>{{ site.bio }}</h2>
+    </header>
+{% endif %}
+<!-- Siempre incluir navegación -->
+{% include nav.html %}
+```
+
+## 🎯 Componentes Clave
+
+### 1. **Header Dinámico**
+- **Archivo**: `_includes/header.html`
+- **Funcionalidad**: Muestra header completo solo en home, blog, projects, tags
+- **Animación**: Particles.js con configuración en `assets/particles.json`
+
+### 2. **Navegación**
+- **Archivo**: `_includes/nav.html`
+- **Funcionalidad**: Navegación fija presente en todas las páginas
+
+### 3. **Side-by-side Layout**
+- **Archivo**: `_sass/components/side-by-side.sass`
+- **Uso**: Layout de dos columnas para contenido con imágenes
+- **Responsivo**: Se convierte en columna única en móviles
+
+### 4. **Sistema de Temas**
+- **Claro**: `_includes/style.scss` + `_sass/base/variables.sass`
+- **Oscuro**: `_includes/style-dark.scss` + `_sass/base/variables-dark.sass`
+- **Actual**: Tema oscuro activado (`dark-theme: true`)
+
+## 📱 Responsividad
+
+### Breakpoints Definidos
+```sass
+$mobile: "only screen and (max-width: 400px)"
+$tablet: "only screen and (min-width: 400px) and (max-width: 1050px)"
+$above: "only screen and (min-width: 780px)"
+$below: "only screen and (max-width: 780px)"
+```
+
+### Estrategia Mobile-First
+- Diseño base para móviles
+- Mejoras progresivas para tablets y desktop
+- Imágenes y layout adaptativos
+
+## 🔧 Factibilidad de Modificaciones de Diseño
+
+### ✅ **MUY FACTIBLE - Cambios CSS Puros**
+
+#### Para la página "Sobre mí":
+1. **Modificar estilos existentes**:
+   - Editar `_sass/pages/page.sass` para estilos generales
+   - Crear nuevas clases en `_sass/components/` para componentes específicos
+   - Mantener el contenido markdown intacto
+
+2. **Agregar componentes nuevos**:
+   - Crear `_sass/components/timeline.sass` para línea de tiempo
+   - Crear `_sass/components/skills-grid.sass` para habilidades
+   - Crear `_sass/components/achievement-cards.sass` para logros
+
+3. **Ventajas del sistema actual**:
+   - **Separación clara**: Contenido (markdown) vs presentación (CSS)
+   - **Modularidad**: Cada componente tiene su archivo Sass
+   - **No rompe nada**: Los cambios CSS no afectan la funcionalidad Jekyll
+   - **Mantienes el flujo**: Markdown → Jekyll → HTML sigue igual
+
+### ✅ **FACTIBLE - Pequeñas Modificaciones HTML**
+
+1. **Agregar clases CSS** al markdown:
+```markdown
+<div class="timeline-container">
+## Trayectoria profesional
+* **Programador - *Corporación Interuniversitaria*** (2022-2024)
+</div>
+```
+
+2. **Crear includes** para componentes complejos:
+```liquid
+<!-- En about.md -->
+{% include components/skills-grid.html %}
+{% include components/professional-timeline.html %}
+```
+
+### ⚠️ **MODERADAMENTE FACTIBLE - Con Cuidado**
+
+1. **Modificar layouts**: Cambiar `_layouts/page.html` podría afectar otras páginas
+2. **JavaScript pesado**: El template es minimalista, JS complejo rompería la filosofía
+3. **Cambios estructurales mayores**: Podrían requerir modificar múltiples archivos
+
+### ❌ **NO RECOMENDADO**
+
+1. **Frameworks CSS pesados**: Bootstrap, Tailwind, etc. chocarían con Indigo
+2. **React/Vue**: Va contra tu objetivo de simplicidad markdown → web
+3. **Cambios en core Jekyll**: Modificar `_config.yml` o estructura base
+
+## 🚀 Recomendaciones para Modificar "Sobre mí"
+
+### Enfoque Optimal (Mantiene la simplicidad):
+
+1. **Mantén el about.md** con su contenido actual
+2. **Crea componentes CSS** específicos:
+   ```
+   _sass/components/
+   ├── professional-card.sass      # Tarjeta para foto de perfil
+   ├── timeline.sass               # Línea de tiempo profesional  
+   ├── skills-grid.sass            # Grid de habilidades
+   ├── achievement-showcase.sass   # Tarjetas de logros
+   └── hobby-cards.sass           # Sección de hobbies mejorada
+   ```
+
+3. **Agrega clases específicas** al markdown existente sin romper la estructura
+
+4. **Mantén particles.js** solo en home para preservar la diferenciación
+
+### Ventajas de este enfoque:
+- ✅ **Simplicidad preservada**: Markdown → Jekyll → Web
+- ✅ **No frameworks externos**: Mantiene la filosofía minimalista
+- ✅ **Modular**: Cada mejora es un componente independiente
+- ✅ **Reversible**: Puedes quitar cambios fácilmente
+- ✅ **GitHub Pages compatible**: Sin dependencias extra
+
+### Flujo de trabajo recomendado:
+1. **Diseñar un componente** (ej: timeline)
+2. **Crear el archivo Sass** correspondiente
+3. **Agregar clases al markdown** existente
+4. **Probar en local** con `jekyll serve`
+5. **Deployar automáticamente** via GitHub Pages
+
+## 📊 Estado Actual
+
+- **✅ Funcionalidad completa**: Sitio profesional operativo
+- **✅ SEO optimizado**: Meta tags, sitemap, robots.txt
+- **✅ Responsive**: Adaptado a todos los dispositivos
+- **✅ Performance**: Carga rápida, assets optimizados
+- **✅ Contenido profesional**: Biografía, experiencia, habilidades completadas
+
+**Conclusión**: Este portafolio es **altamente modificable** manteniendo tu flujo preferido de Markdown → Jekyll → Web. Los cambios de diseño se pueden hacer puramente via CSS/Sass sin afectar la arquitectura ni la simplicidad del sistema.
 
 ## Desarrollo Local
 

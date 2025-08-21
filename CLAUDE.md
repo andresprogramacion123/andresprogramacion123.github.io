@@ -125,3 +125,147 @@ Esto permite títulos en español manteniendo la funcionalidad del template.
 4. **Optimizar meta keywords** por ubicación geográfica
 
 Este portafolio está **85% profesionalizado** y listo para atraer oportunidades laborales. El 15% restante se completa con contenido técnico que demuestre habilidades prácticas.
+
+---
+
+## Conversación: Análisis Arquitectónico y Factibilidad de Modificaciones de Diseño
+
+### Contexto
+**Fecha:** 2025-08-21  
+**Objetivo:** Analizar completamente la arquitectura del portafolio y evaluar la factibilidad de modificaciones de diseño, especialmente en la página "Sobre mí", manteniendo la filosofía minimalista y el flujo Markdown → Jekyll → Web.
+
+### Hallazgos Arquitectónicos Clave
+
+#### 🏗️ Template Base: Indigo
+- **Framework:** Jekyll (generador de sitios estáticos)
+- **Filosofía:** Minimalista, enfocado en contenido
+- **Ventaja clave:** Separación clara entre contenido (Markdown) y presentación (CSS)
+
+#### 📁 Estructura Técnica Identificada
+```
+├── _config.yml              # Configuración principal Jekyll
+├── _layouts/                 # Plantillas HTML
+│   ├── default.html         # Layout base con head/body
+│   ├── page.html            # Para páginas estáticas
+│   └── compress.html        # Compresión HTML automática
+├── _includes/               # Componentes reutilizables
+│   ├── header.html          # Header dinámico con particles.js
+│   ├── nav.html             # Navegación
+│   ├── style.scss           # Importaciones CSS tema claro
+│   └── style-dark.scss      # Importaciones CSS tema oscuro
+├── _sass/                   # Sistema CSS modular
+│   ├── base/                # Variables y estilos base
+│   ├── components/          # Componentes específicos
+│   └── pages/               # Estilos por página
+```
+
+#### 🎨 Sistema de Estilos (Sass/SCSS)
+**Arquitectura muy organizada:**
+- `_sass/base/variables.sass` - Colores, fuentes, breakpoints
+- `_sass/components/side-by-side.sass` - Layout dos columnas (usado en "Sobre mí")
+- `_sass/pages/page.sass` - Estilos específicos para páginas como "Sobre mí"
+
+**Variables de diseño identificadas:**
+```sass
+$alpha: #666      // Texto secundario
+$beta: #222       // Texto principal
+$delta: rgb(1, 44, 107) // Enlaces y acentos
+$epsilon: #ededed // Bordes
+$omega: #fff      // Fondo claro
+```
+
+#### ⚙️ Proceso de Renderizado Detallado
+
+**Para página "Sobre mí":**
+1. `about.md` (Markdown) → Conversión HTML automática
+2. `_layouts/page.html` → Envuelve contenido
+3. `_layouts/default.html` → Añade header (SIN particles.js), nav, footer
+4. CSS compilado → Sass se procesa inline en `<style>`
+
+**Lógica condicional del header:**
+```liquid
+{% if page.slug == "home" %}
+    <!-- Header completo con particles.js -->
+{% endif %}
+<!-- Navegación siempre presente -->
+```
+
+#### 📚 Dependencias Identificadas
+- **JavaScript:** Particles.js (solo homepage), FontAwesome 6.4.2
+- **Jekyll Plugins:** jekyll-seo-tag, jekyll-feed, jemoji
+- **CSS:** Normalize.css, Sass/SCSS nativo
+
+### Evaluación de Factibilidad para Modificaciones
+
+#### ✅ **MUY FACTIBLE - Cambios CSS Puros**
+**Perfectamente alineado con preferencias del usuario:**
+
+1. **Mantener about.md intacto** - Contenido seguirá siendo Markdown puro
+2. **Crear componentes CSS nuevos:**
+   - `_sass/components/timeline.sass` - Línea de tiempo profesional
+   - `_sass/components/skills-grid.sass` - Grid de habilidades mejorado
+   - `_sass/components/achievement-cards.sass` - Logros con mejor presentación
+   - `_sass/components/professional-card.sass` - Tarjeta para foto perfil
+
+3. **Agregar clases específicas al Markdown:**
+```markdown
+<div class="professional-timeline">
+## Trayectoria profesional
+* **Programador - Corporación Interuniversitaria** (2022-2024)
+</div>
+```
+
+#### ✅ **VENTAJAS del Enfoque Recomendado**
+- **Separación clara:** Contenido (Markdown) vs Presentación (CSS)
+- **Modularidad:** Cada componente tiene su archivo Sass independiente  
+- **No rompe nada:** Cambios CSS no afectan funcionalidad Jekyll
+- **Flujo preservado:** Markdown → Jekyll → HTML se mantiene igual
+- **Reversible:** Fácil quitar cambios si no gustan
+- **GitHub Pages compatible:** Sin dependencias externas
+
+#### ⚠️ **MODERADAMENTE FACTIBLE - Con Cuidado**
+- Modificar `_layouts/page.html` podría afectar otras páginas
+- JavaScript pesado rompería filosofía minimalista
+- Cambios estructurales mayores requerirían múltiples modificaciones
+
+#### ❌ **NO RECOMENDADO**
+- Frameworks CSS pesados (Bootstrap, Tailwind)
+- React/Vue (contra objetivo de simplicidad)
+- Modificaciones core Jekyll
+
+### Recomendaciones Específicas
+
+#### 🎯 **Para Modificar "Sobre mí" Manteniendo "Inicio"**
+
+**Enfoque Optimal:**
+1. **Preservar página de inicio** - Particles.js, header dinámico intactos
+2. **Solo modificar estilos** de la página "Sobre mí" vía CSS
+3. **Usar sistema de variables existente** - $delta, $alpha, breakpoints
+4. **Mantener layout responsivo** - Sistema mobile-first ya implementado
+
+**Flujo de trabajo recomendado:**
+1. Diseñar componente específico (ej: timeline)
+2. Crear archivo `_sass/components/componente.sass`  
+3. Importar en `_includes/style-dark.scss`
+4. Agregar clases al `about.md`
+5. Probar localmente con `jekyll serve`
+6. Deploy automático vía GitHub Pages
+
+### Conclusiones Clave
+
+#### ✅ **Portafolio Altamente Modificable**
+- Template Indigo específicamente diseñado para contenido Markdown + CSS
+- Sistema CSS modular permite cambios incrementales
+- Arquitectura Jekyll preserva flujo preferido: Markdown → Web
+- Sin necesidad de frameworks externos o JavaScript complejo
+
+#### 🎯 **Estado Actual Óptimo**
+- Funcionalidad completa operativa
+- SEO optimizado, responsive, performance excelente  
+- Contenido profesional completado
+- **Ready para modificaciones de diseño** sin riesgo arquitectónico
+
+#### 📋 **Próximo Paso Recomendado**
+Implementar mejoras de diseño componente por componente, empezando por la sección más simple y escalando gradualmente, manteniendo siempre la filosofía minimalista del template Indigo.
+
+**Factibilidad confirmada: 100% compatible con preferencias técnicas del usuario.**
