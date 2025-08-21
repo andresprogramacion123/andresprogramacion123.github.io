@@ -1,19 +1,18 @@
-// Componente: About Experience Section
-// Timeline profesional para la sección de trayectoria
+// =============================================================================
+// ABOUT EXPERIENCE SECTION
+// =============================================================================
+// Componente: Timeline profesional responsive con versiones móvil/desktop
+// Ubicación: about.md > .about-experience-section
 
 .about-experience-section
-    margin-bottom: 4rem
-    max-width: 1200px
-    margin-left: auto
-    margin-right: auto
+    @include about-section-container
     
     h2
-        text-align: center
-        margin-bottom: 3rem
-        font-family: $fontSans
-        font-size: 2.2rem
-        color: $beta
-        font-weight: 700
+        @include about-section-title
+
+    // -----------------------------------------------------------------------------
+    // TIMELINE VERTICAL (MÓVIL)
+    // -----------------------------------------------------------------------------
 
     // Timeline vertical (móvil)
     .experience-timeline-mobile
@@ -37,6 +36,21 @@
                 bottom: -2.5rem
                 width: 2px
                 background: linear-gradient(180deg, $delta 0%, $alpha 100%)
+
+            // Flecha integrada en la línea vertical (móvil) - CSS pura
+            &:not(:last-child)::after
+                content: ""
+                position: absolute
+                left: -2.1rem
+                bottom: -0.8rem
+                width: 0
+                height: 0
+                border-left: 8px solid transparent
+                border-right: 8px solid transparent
+                border-bottom: 12px solid $delta
+                z-index: 2
+                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3))
+                animation: arrowPulse 3s ease-in-out infinite
 
             .timeline-icon
                 position: absolute
@@ -119,6 +133,22 @@
             align-items: center
             text-align: center
             transition: all 0.3s ease
+            position: relative
+
+            // Flecha integrada en la línea horizontal (desktop) - CSS pura
+            &:not(:last-child)::after
+                content: ""
+                position: absolute
+                right: -18px
+                top: 2.2rem
+                width: 0
+                height: 0
+                border-top: 8px solid transparent
+                border-bottom: 8px solid transparent
+                border-right: 12px solid $delta
+                z-index: 10
+                filter: drop-shadow(0 2px 6px rgba(56, 182, 255, 0.4))
+                animation: arrowPulse 3s ease-in-out infinite
 
             &:hover
                 .timeline-icon
@@ -175,6 +205,23 @@
                     font-size: 1rem
                     font-weight: 400
                     color: $delta
+
+// -----------------------------------------------------------------------------
+// ANIMATIONS
+// -----------------------------------------------------------------------------
+
+// Animación de pulsación suave para las flechas
+@keyframes arrowPulse
+    0%, 100%
+        opacity: 0.7
+        transform: scale(1)
+    50%
+        opacity: 1
+        transform: scale(1.1)
+
+// -----------------------------------------------------------------------------
+// THEME ADJUSTMENTS
+// -----------------------------------------------------------------------------
 
 // Tema oscuro - ajustes
 @media (prefers-color-scheme: dark)

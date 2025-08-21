@@ -1,12 +1,14 @@
-// Componente: About Intro Section
-// Controla el layout de la sección de introducción en about.md
+// =============================================================================
+// ABOUT INTRO SECTION
+// =============================================================================
+// Componente: Sección de introducción profesional
+// Ubicación: about.md > .about-intro-section
 
 .about-intro-section
-    margin-bottom: 4rem
-    max-width: 800px
-    margin-left: auto
-    margin-right: auto
+    // Usar contenedor más estrecho para mejor legibilidad
+    @include about-section-container(800px)
     
     p
+        @include about-paragraph
         text-align: justify
-        margin-bottom: 2rem
+        margin-bottom: $card-spacing

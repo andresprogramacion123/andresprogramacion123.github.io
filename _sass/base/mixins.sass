@@ -1,0 +1,146 @@
+// =============================================================================
+// MIXINS - About Section Components
+// =============================================================================
+// Mixins reutilizables para eliminar duplicación de código en componentes
+
+// -----------------------------------------------------------------------------
+// Layout Mixins
+// -----------------------------------------------------------------------------
+
+// Contenedor base para secciones about
+@mixin about-section-container($max-width: 1200px)
+    margin-bottom: 4rem
+    max-width: $max-width
+    margin-left: auto
+    margin-right: auto
+
+// Título principal de sección (h2)
+@mixin about-section-title
+    text-align: center
+    margin-bottom: 3rem
+    font-family: $fontSans
+    font-size: 2.2rem
+    color: $beta
+    font-weight: 700
+
+// Título secundario (h3)
+@mixin about-subsection-title
+    font-family: $fontSans
+    font-size: 1.6rem
+    font-weight: 600
+    color: $delta
+    margin-bottom: 1rem
+    line-height: 1.3
+
+// Párrafo estándar
+@mixin about-paragraph
+    font-family: $fontSans
+    font-size: 1.3rem
+    line-height: 1.6
+    color: $beta
+
+// -----------------------------------------------------------------------------
+// Card Mixins
+// -----------------------------------------------------------------------------
+
+// Card base con efecto glassmorphism
+@mixin glass-card($padding: 1.5rem)
+    background: rgba(255, 255, 255, 0.05)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    border-radius: 12px
+    padding: $padding
+    transition: all 0.3s ease
+    backdrop-filter: blur(10px)
+
+// Efecto hover para cards
+@mixin card-hover-effect
+    &:hover
+        transform: translateY(-2px)
+        border-color: $delta
+        box-shadow: 0 8px 25px rgba(56, 182, 255, 0.15)
+
+// Card completa con hover
+@mixin about-card($padding: 1.5rem)
+    @include glass-card($padding)
+    @include card-hover-effect
+
+// -----------------------------------------------------------------------------
+// Button/Badge Mixins
+// -----------------------------------------------------------------------------
+
+// Badge/button con gradiente azul
+@mixin primary-badge($padding-vertical: 0.75rem, $padding-horizontal: 1.5rem)
+    display: inline-flex
+    align-items: center
+    padding: $padding-vertical $padding-horizontal
+    background: linear-gradient(135deg, $delta, darken($delta, 10%))
+    color: $omega
+    border-radius: 25px
+    font-family: $fontSans
+    text-decoration: none
+    border: 2px solid transparent
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    box-shadow: 0 2px 8px rgba(56, 182, 255, 0.2)
+
+// Hover para badges
+@mixin badge-hover-effect
+    &:hover
+        transform: translateY(-3px) scale(1.02)
+        background: linear-gradient(135deg, lighten($delta, 5%), $delta)
+        box-shadow: 0 6px 20px rgba(56, 182, 255, 0.4)
+        border-color: rgba(255, 255, 255, 0.3)
+
+// Badge completo con hover
+@mixin primary-badge-complete($padding-vertical: 0.75rem, $padding-horizontal: 1.5rem)
+    @include primary-badge($padding-vertical, $padding-horizontal)
+    @include badge-hover-effect
+
+// -----------------------------------------------------------------------------
+// Responsive Mixins
+// -----------------------------------------------------------------------------
+
+// Grid responsive estándar
+@mixin responsive-grid($desktop-cols: 3, $tablet-cols: 2, $mobile-cols: 1, $gap: 2rem)
+    display: grid
+    grid-template-columns: repeat($desktop-cols, 1fr)
+    gap: $gap
+    padding: 0 1rem
+
+    @media #{$tablet}
+        grid-template-columns: repeat($tablet-cols, 1fr)
+        gap: $gap * 0.75
+
+    @media #{$mobile}
+        grid-template-columns: repeat($mobile-cols, 1fr)
+        gap: $gap * 0.5
+
+// Flex responsive para badges/tags
+@mixin responsive-flex($gap: 1rem)
+    display: flex
+    flex-wrap: wrap
+    gap: $gap
+    justify-content: center
+    padding: 0 1rem
+
+    @media #{$tablet}
+        gap: $gap * 0.8
+
+    @media #{$mobile}
+        gap: $gap * 0.6
+
+// -----------------------------------------------------------------------------
+// Utility Mixins
+// -----------------------------------------------------------------------------
+
+// Reset de margins
+@mixin no-margin
+    margin: 0
+
+// Centrado absoluto
+@mixin center-absolute
+    margin-left: auto
+    margin-right: auto
+
+// Texto centrado
+@mixin center-text
+    text-align: center

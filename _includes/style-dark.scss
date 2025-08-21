@@ -1,5 +1,6 @@
 
 @import "base/variables-dark";
+@import "base/mixins";
 @import "base/normalize";
 @import "base/syntax-dark";
 @import "base/general";
@@ -23,3 +24,6 @@
 @import "components/spoiler";
 @import "components/about-intro";
 @import "components/about-experience";
+@import "components/about-skills";
+@import "components/about-awards";
+@import "components/about-soft-skills";

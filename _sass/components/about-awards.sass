@@ -1,0 +1,132 @@
+// =============================================================================
+// ABOUT AWARDS & PUBLICATIONS SECTIONS
+// =============================================================================
+// Componentes: Reconocimientos y publicaciones con cards horizontales
+// Ubicación: about.md > .about-awards-section, .about-publications-section
+
+// -----------------------------------------------------------------------------
+// AWARDS SECTION
+// -----------------------------------------------------------------------------
+
+.about-awards-section
+    @include about-section-container
+
+    h2
+        @include about-section-title
+
+    .award-card
+        @include about-card($card-spacing)
+        display: flex
+        align-items: flex-start
+        gap: $card-spacing
+        margin-bottom: $card-spacing
+
+        @media #{$tablet}
+            flex-direction: column
+            text-align: center
+
+        @media #{$mobile}
+            padding: 1.5rem
+
+        .award-image
+            flex-shrink: 0
+            width: 180px
+            height: 120px
+
+            @media #{$tablet}
+                align-self: center
+                width: 200px
+                height: 140px
+
+            @media #{$mobile}
+                width: 160px
+                height: 100px
+
+            i
+                font-size: 4rem
+                color: $delta
+                display: block
+                text-align: center
+                line-height: 120px
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+                border-radius: 8px
+                border: 2px solid rgba(56, 182, 255, 0.2)
+                background: rgba(255, 255, 255, 0.05)
+
+        .award-content
+            flex: 1
+
+            h3
+                @include about-subsection-title
+
+            p
+                @include about-paragraph
+                @include no-margin
+
+// -----------------------------------------------------------------------------
+// PUBLICATIONS SECTION
+// -----------------------------------------------------------------------------
+
+.about-publications-section
+    @include about-section-container
+
+    h2
+        @include about-section-title
+
+    .publication-card
+        @include about-card($card-spacing)
+        display: flex
+        align-items: flex-start
+        gap: $card-spacing
+        margin-bottom: $card-spacing
+
+        @media #{$tablet}
+            flex-direction: column
+            text-align: center
+
+        @media #{$mobile}
+            padding: 1.5rem
+
+        .publication-image
+            flex-shrink: 0
+            width: 120px
+            height: 150px
+
+            @media #{$tablet}
+                align-self: center
+
+            i
+                font-size: 4rem
+                color: $delta
+                display: block
+                text-align: center
+                line-height: 150px
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 8px
+                border: 2px solid rgba(56, 182, 255, 0.2)
+
+        .publication-content
+            flex: 1
+
+            h3
+                @include about-subsection-title
+
+            p
+                @include about-paragraph
+                margin-bottom: 1.5rem
+
+            .publication-link
+                @include primary-badge-complete(0.75rem, 1.5rem)
+                font-size: 0.9rem
+                font-weight: 500
+
+                i
+                    font-size: 1rem

@@ -1,0 +1,64 @@
+// =============================================================================
+// ABOUT SKILLS SECTION
+// =============================================================================
+// Componente: Grid de habilidades técnicas con tarjetas categorizadas
+// Ubicación: about.md > .about-skills-section
+
+.about-skills-section
+    @include about-section-container
+
+    h2
+        @include about-section-title
+
+    .skills-grid
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        gap: $card-spacing
+        padding: 0 1rem
+
+        @media #{$tablet}
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+            gap: 1.5rem
+
+        @media #{$mobile}
+            grid-template-columns: 1fr
+            gap: $small-spacing
+
+    .skill-card
+        @include about-card
+
+        .skill-header
+            display: flex
+            align-items: center
+            margin-bottom: $small-spacing
+            color: $delta
+
+            .skill-icon
+                font-size: 1.5rem
+                margin-right: 0.75rem
+                width: 30px
+                text-align: center
+
+            .skill-title
+                @include about-subsection-title
+                @include no-margin
+
+        .skill-tags
+            display: flex
+            flex-wrap: wrap
+            gap: $tiny-spacing
+
+            .skill-tag
+                font-family: $fontSans
+                background: rgba(56, 182, 255, 0.1)
+                color: $beta
+                padding: 0.25rem 0.75rem
+                border-radius: 20px
+                font-size: 0.9rem
+                border: 1px solid rgba(56, 182, 255, 0.2)
+                transition: all 0.3s ease
+
+                &:hover
+                    background: rgba(56, 182, 255, 0.2)
+                    border-color: rgba(56, 182, 255, 0.4)
+                    color: $zeta
