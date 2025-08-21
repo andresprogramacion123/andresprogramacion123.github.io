@@ -1,0 +1,187 @@
+// Componente: About Experience Section
+// Timeline profesional para la sección de trayectoria
+
+.about-experience-section
+    margin-bottom: 4rem
+    max-width: 1200px
+    margin-left: auto
+    margin-right: auto
+    
+    h2
+        text-align: center
+        margin-bottom: 3rem
+        font-family: $fontSans
+        font-size: 2.2rem
+        color: $beta
+        font-weight: 700
+
+    // Timeline vertical (móvil)
+    .experience-timeline-mobile
+        display: block
+        position: relative
+        padding-left: 2rem
+
+        @media #{$above}
+            display: none
+
+        .timeline-item
+            position: relative
+            margin-bottom: 3rem
+            padding-left: 2.5rem
+
+            &:not(:last-child)::before
+                content: ""
+                position: absolute
+                left: -1.75rem
+                top: 3rem
+                bottom: -2.5rem
+                width: 2px
+                background: linear-gradient(180deg, $delta 0%, $alpha 100%)
+
+            .timeline-icon
+                position: absolute
+                left: -2.5rem
+                top: 0.5rem
+                width: 3.5rem
+                height: 3.5rem
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                background: linear-gradient(135deg, $delta, darken($delta, 10%))
+                color: $omega
+                font-size: 1.2rem
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2)
+                z-index: 2
+
+            .timeline-content
+                background: $omega
+                border: 1px solid $epsilon
+                border-radius: 8px
+                padding: 1.5rem
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+                transition: all 0.3s ease
+
+                &:hover
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.15)
+                    border-color: $delta
+
+                .job-title
+                    font-family: $fontSans
+                    font-size: 1.4rem
+                    font-weight: 600
+                    color: $beta
+                    margin-bottom: 0.5rem
+
+                .company
+                    font-family: $fontSans
+                    font-size: 1.2rem
+                    font-weight: $thin-font
+                    color: $gama
+                    margin-bottom: 0.5rem
+
+                .period
+                    font-family: $fontSans
+                    font-size: 1.1rem
+                    font-weight: 400
+                    color: $delta
+
+    // Timeline horizontal (desktop)
+    .experience-timeline-desktop
+        display: none
+        position: relative
+        padding: 2rem 0
+
+        @media #{$above}
+            display: block
+
+        .timeline-line
+            position: absolute
+            top: 4rem
+            left: 8%
+            right: 8%
+            height: 3px
+            background: linear-gradient(90deg, $delta 0%, lighten($delta, 10%) 50%, $delta 100%)
+            border-radius: 2px
+
+        .timeline-items
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            gap: 1.5rem
+            padding: 0 2%
+
+        .timeline-item
+            flex: 1
+            max-width: 280px
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            transition: all 0.3s ease
+
+            &:hover
+                .timeline-icon
+                    transform: scale(1.05)
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.3)
+
+                .timeline-content
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.2)
+                    border-color: $delta
+
+            .timeline-icon
+                position: relative
+                z-index: 10
+                width: 4rem
+                height: 4rem
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                background: linear-gradient(135deg, $delta, darken($delta, 15%))
+                color: $omega
+                font-size: 1.5rem
+                box-shadow: 0 6px 20px rgba(0,0,0,0.25)
+                margin-bottom: 1.5rem
+                transition: all 0.3s ease
+
+            .timeline-content
+                background: $omega
+                border: 1px solid $epsilon
+                border-radius: 12px
+                padding: 1.5rem
+                min-height: 180px
+                width: 100%
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1)
+                transition: all 0.3s ease
+
+                .job-title
+                    font-family: $fontSans
+                    font-size: 1.3rem
+                    font-weight: 600
+                    color: $beta
+                    margin-bottom: 0.75rem
+                    line-height: 1.3
+
+                .company
+                    font-family: $fontSans
+                    font-size: 1.1rem
+                    font-weight: $thin-font
+                    color: $gama
+                    margin-bottom: 0.75rem
+
+                .period
+                    font-family: $fontSans
+                    font-size: 1rem
+                    font-weight: 400
+                    color: $delta
+
+// Tema oscuro - ajustes
+@media (prefers-color-scheme: dark)
+    .about-experience-section
+        .timeline-content
+            background: rgba(255, 255, 255, 0.05)
+            border-color: rgba(255, 255, 255, 0.1)
+
+            &:hover
+                background: rgba(255, 255, 255, 0.08)

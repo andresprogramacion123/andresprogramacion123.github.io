@@ -6,7 +6,87 @@
         margin-bottom: 6rem
 
 .about
-    img
-        width: 50%
-        margin: 0 auto
-        display: block
+    // Sección del perfil/imagen
+    .about-profile-section
+        text-align: center
+        margin-bottom: 3rem
+        
+        img
+            width: 200px
+            height: 200px
+            margin: 0 auto 2rem
+            display: block
+            border-radius: 50%
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15)
+            
+            @media #{$above}
+                width: 300px
+                height: 300px
+
+    // Sección de introducción/bio - Estilos movidos a components/about-intro.sass
+
+    // Sección de experiencia profesional - Estilos movidos a components/about-experience.sass
+
+    // Sección de habilidades técnicas
+    .about-skills-section
+        margin-bottom: 4rem
+        
+        h2
+            font-family: $fontSans
+            font-size: 2.2rem
+            color: $beta
+            margin-bottom: 2rem
+            text-align: center
+            
+        ul, li
+            font-family: $fontSans
+            font-size: 1.4rem
+            line-height: 2.4rem
+            font-weight: $thin-font
+            color: $alpha
+
+    // Sección de premios y reconocimientos
+    .about-awards-section
+        margin-bottom: 4rem
+        
+        h2
+            font-family: $fontSans
+            font-size: 2.2rem
+            color: $beta
+            margin-bottom: 2rem
+            text-align: center
+
+    // Sección de soft skills
+    .about-soft-skills-section
+        margin-bottom: 4rem
+        
+        h2
+            font-family: $fontSans
+            font-size: 2.2rem
+            color: $beta
+            margin-bottom: 2rem
+            text-align: center
+            
+        ul, li
+            font-family: $fontSans
+            font-size: 1.4rem
+            line-height: 2.4rem
+            font-weight: $thin-font
+            color: $alpha
+
+    // Sección de hobbies
+    .about-hobbies-section
+        margin-bottom: 4rem
+        
+        h2, h3
+            font-family: $fontSans
+            color: $beta
+            text-align: center
+            
+        h2
+            font-size: 2.2rem
+            margin-bottom: 2rem
+            
+        h3
+            font-size: 1.8rem
+            margin: 2rem 0 1rem 0
