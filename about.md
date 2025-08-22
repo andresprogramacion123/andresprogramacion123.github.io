@@ -5,7 +5,7 @@ slug: about
 ---
 
 <div class="about-profile-section" markdown="1">
-![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
+![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}){:loading="lazy" :style="will-change: transform"}
 </div>
 
 <div class="about-intro-section" markdown="1">
