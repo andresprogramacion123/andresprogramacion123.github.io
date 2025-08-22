@@ -4,8 +4,17 @@ layout: page
 slug: about
 ---
 
-<div class="about-profile-section" markdown="1">
-![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}){:loading="lazy" :style="will-change: transform"}
+<div class="about-profile-section">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" alt="Profile Image" loading="lazy">
+            </div>
+            <div class="flip-card-back">
+                <img src="{{ site.url }}/assets/images/avatar.png" alt="Avatar JM" loading="lazy">
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="about-intro-section" markdown="1">
