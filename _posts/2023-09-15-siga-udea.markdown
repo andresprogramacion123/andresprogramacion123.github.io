@@ -1,22 +1,22 @@
 ---
-title: "🚀 Plataforma de programación académica"
+title: "🧠 Plataforma de de gestion administrativa para la Facultad de Ciencias Exactas"
 layout: post
-date: 2024-01-30 22:10
+date: 2023-09-15
 tag: 
 - Desarrollo web
-- Plataforma Académica
+- Gestión Administrativa
 - Aplicación
-image: ../assets/images/ProgramacionAcademica.png
+image: ../assets/images/SigaUdeA.png
 headerImage: true
 projects: true
 hidden: false
-description: "Esta es una aplicación para la facultad de medicina UdeA en el area de programación académica utilizando el framework FastAPI 💪"
+description: "Esta es una aplicación para la Facultad de Ciencias Exactas y Naturales UdeA para la gestión administrativa y el manejo de solicitudes por parte de los profesores 💪"
 category: project
 author: julianmontoya
 externalLink: false
 ---
 
-![Screenshot](../assets/images/WebProgramacionAcademica.png)
+![Screenshot](../assets/images/WebSigaUdeA.png)
 
 Example of project - Indigo Minimalist Jekyll Template - [Demo](https://sergiokopplin.github.io/indigo/). This is a simple and minimalist template for Jekyll for those who likes to eat noodles.
 
