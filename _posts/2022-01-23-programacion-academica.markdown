@@ -1,22 +1,22 @@
 ---
-title: ":ramen: Plataforma de programación academica"
+title: "🚀 Plataforma de programación académica"
 layout: post
-date: 2022-01-23 22:10
+date: 2024-01-30 22:10
 tag: 
 - Desarrollo web
-- Plataforma
-- Aplicacion
-image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
+- Plataforma Académica
+- Aplicación
+image: ../assets/images/ProgramacionAcademica.png
 headerImage: true
 projects: true
 hidden: false
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+description: "Esta es una aplicación para la facultad de medicina UdeA en el area de programación académica utilizando el framework FastAPI 💪"
 category: project
 author: julianmontoya
 externalLink: false
 ---
 
-![Screenshot](https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png)
+![Screenshot](../assets/images/WebProgramacionAcademica.png)
 
 Example of project - Indigo Minimalist Jekyll Template - [Demo](https://sergiokopplin.github.io/indigo/). This is a simple and minimalist template for Jekyll for those who likes to eat noodles.
 
