@@ -1,5 +1,5 @@
 ---
-title: "🧠 Plataforma de de gestion administrativa para la Facultad de Ciencias Exactas"
+title: "🧠 Plataforma de gestion administrativa para la Facultad de Ciencias Exactas"
 layout: post
 date: 2023-09-15
 tag: 
