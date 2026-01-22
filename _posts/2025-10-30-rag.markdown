@@ -1,16 +1,16 @@
 ---
-title: "🚀 RAG Personal"
+title: "💬 RAG Chatbot"
 layout: post
 date: 2025-10-30
 tag: 
 - Inteligencia artificial
 - LLM
 - RAG
-image: ../assets/images/ProgramacionAcademica.png
+image: ../assets/images/RagChatbot.png
 headerImage: true
 projects: true
 hidden: false
-description: "Esta es una aplicación para la facultad de medicina UdeA en el area de programación académica utilizando el framework FastAPI 💪"
+description: "Sistema RAG 💪"
 category: project
 author: julianmontoya
 externalLink: false

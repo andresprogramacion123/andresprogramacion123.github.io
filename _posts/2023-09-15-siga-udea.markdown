@@ -1,16 +1,20 @@
 ---
-title: "🧠 Plataforma de gestion administrativa para la Facultad de Ciencias Exactas"
+title: "🧠 Sistema de Gestión Académica (SIGA)"
 layout: post
 date: 2023-09-15
 tag: 
-- Desarrollo web
-- Gestión Administrativa
-- Aplicación
+- nodejs
+- express
+- mysql
+- sequelize
+- docker
+- jwt
+- api-rest
 image: ../assets/images/SigaUdeA.png
 headerImage: true
 projects: true
 hidden: false
-description: "Esta es una aplicación para la Facultad de Ciencias Exactas y Naturales UdeA para la gestión administrativa y el manejo de solicitudes por parte de los profesores 💪"
+description: "Backend API REST para digitalización de trámites académicos universitarios con generación automática de documentos y flujo de aprobaciones 💪"
 category: project
 author: julianmontoya
 externalLink: false
@@ -20,20 +24,116 @@ externalLink: false
 
 [Aplicacion web](https://siga-fcen.com/auth/login)
 
-Example of project - Indigo Minimalist Jekyll Template - [Demo](https://sergiokopplin.github.io/indigo/). This is a simple and minimalist template for Jekyll for those who likes to eat noodles.
+## Contexto
+
+Sistema backend desarrollado para la **Universidad de Antioquia - Facultad de Ciencias Exactas** que digitaliza y automatiza la gestión de trámites académicos para profesores: comisiones de estudio, permisos laborales y dedicación exclusiva.
+
+Reemplaza procesos manuales en papel por un flujo digital completo con **generación automática de resoluciones**, **notificaciones por email** y **seguimiento de aprobaciones** por jerarquía organizacional.
 
 ---
 
-What has inside?
+## Stack Técnico
 
-- Gulp
-- BrowserSync
-- Stylus
-- SVG
-- No JS
-- [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F)
+- **Backend:** Node.js + Express.js 4.17
+- **Base de Datos:** MySQL 5.7 + Sequelize ORM
+- **Autenticación:** JWT + bcrypt
+- **Contenedores:** Docker + Docker Compose (multi-ambiente)
+- **Generación de documentos:** PDFMake, ExcelJS
+- **Automatización:** node-cron (tareas programadas)
+- **Emails:** Nodemailer + SMTP
 
 ---
 
-[Check it out](https://sergiokopplin.github.io/indigo/) here.
-If you need some help, just [tell me](https://github.com/sergiokopplin/indigo/issues).
+## Arquitectura y Patrones
+
+### API REST + MVC con Policies
+
+Sistema de autorización **RBAC (Role-Based Access Control)** granular con 7 roles diferentes y control por jerarquía organizacional (Vicerrectoría → Decanatura → Coordinación → Profesor).
+
+Request → Routes → Auth Middleware → Policy → Controller → Model → Response
+
+
+### Control de Autorización Jerárquico
+
+Implementación de políticas que validan acceso no solo por rol, sino también por **departamento** y **facultad**, garantizando que cada usuario solo vea/modifique solicitudes de su ámbito de responsabilidad.
+
+---
+
+## Funcionalidades Principales
+
+### 1. Gestión de Comisiones de Estudio
+- CRUD completo con adjuntos de documentos (PDF, imágenes)
+- Flujo de estados: Solicitada → En Revisión → Aprobada/Rechazada → Archivada
+- Generación automática de **resoluciones en PDF** con formato oficial
+- Validación de permisos remunerados según normativa universitaria
+
+### 2. Sistema de Permisos Laborales
+- Gestión de permisos con categorías (remunerados/no remunerados)
+- Upload de documentos de soporte
+- Descarga de resoluciones oficiales firmadas digitalmente
+
+### 3. Dedicación Exclusiva
+- Módulo completo con:
+  - Cartas de inicio
+  - Planes de trabajo anuales
+  - Formatos de vicerrectoría (Excel)
+  - Informes parciales y finales
+- **Feature destacada:** Clonación de dedicaciones para renovaciones anuales
+
+### 4. Notificaciones Automatizadas
+- **Cron job diario (8 AM)** que:
+  - Notifica informes próximos a vencer (30 días antes)
+  - Cambia automáticamente estado a "FINALIZADA" al vencer
+  - Envía emails personalizados según rol del usuario
+  
+### 5. Generación de Documentos
+- **PDFs dinámicos:** Resoluciones con datos variables (nombres, fechas, números de resolución)
+- **Excel:** Formatos de vicerrectoría con cálculos automáticos
+- **ZIP:** Descarga masiva de todos los documentos de una solicitud
+
+---
+
+## Highlights Técnicos
+
+### Migraciones y Seeders
+- **15 migraciones** Sequelize para versionamiento de base de datos
+- Seeders para datos iniciales (roles, estados, facultades, departamentos)
+- Control de versiones de esquema para despliegues consistentes
+
+### Docker Multi-Ambiente
+Configuración completa con 3 ambientes:
+- `Dockerfile` → Producción
+- `Dockerfile.dev` → Desarrollo con hot reload
+- `docker-compose.{dev|tst}.yml` → Orquestación por ambiente
+
+### Manejo de Fechas Laborales
+Integración con librería `festivos-colombia` para cálculo de **días hábiles** excluyendo festivos nacionales (requerimiento legal para conteo de plazos administrativos).
+
+---
+
+## Desafíos Técnicos Resueltos
+
+1. **Autorización Compleja:** Sistema de permisos que combina rol + jerarquía organizacional (departamento/facultad) para garantizar acceso granular
+
+2. **Generación de PDFs Oficiales:** Templates dinámicos con PDFMake que cumplen formato legal de resoluciones universitarias con logos, firmas y numeración automática
+
+3. **Workflow de Estados:** Máquina de estados con historial completo de transiciones y notificaciones automáticas en cada cambio
+
+4. **Cron Jobs Inteligentes:** Lógica que calcula fechas de vencimiento excluyendo festivos y notifica proactivamente a usuarios relevantes
+
+---
+
+## Impacto
+
+- **Digitalización completa** del proceso de solicitudes académicas para ~200 profesores
+- **Reducción de tiempos** de aprobación de semanas a días
+- **Trazabilidad total** del flujo de aprobaciones con historial auditable
+- **Automatización** de generación de documentos oficiales (antes manuales)
+
+---
+
+## Código
+
+🔒 Proyecto privado institucional - Universidad de Antioquia
+
+---
