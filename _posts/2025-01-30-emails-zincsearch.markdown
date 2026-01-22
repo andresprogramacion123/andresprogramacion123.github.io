@@ -1,7 +1,7 @@
 ---
 title: "🤖 Motor de Búsqueda de Emails"
 layout: post
-date: 2024-10-30
+date: 2025-01-30
 tag: 
 - go
 - vue3
@@ -23,7 +23,7 @@ externalLink: false
 
 ## Contexto
 
-Motor de búsqueda full-text desarrollado como **prueba técnica** que indexa y permite buscar en el histórico completo del **dataset público Enron** (517,424 correos electrónicos).
+Motor de búsqueda full-text que indexa y permite buscar en el histórico completo del **dataset público Enron** (517,424 correos electrónicos).
 
 Implementa búsqueda de alta performance con **resaltado de coincidencias**, indexación concurrente optimizada, y frontend responsive moderno.
 
