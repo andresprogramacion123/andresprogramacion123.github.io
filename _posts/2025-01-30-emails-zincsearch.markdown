@@ -11,7 +11,7 @@ tag:
 - concurrency
 - vite
 - tailwindcss
-image: ../assets/images/RagChatbot.png
+image: ../assets/images/EmailsZincSearch.png
 headerImage: true
 projects: true
 hidden: false
